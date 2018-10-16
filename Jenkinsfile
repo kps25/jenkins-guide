@@ -19,16 +19,16 @@ steps {
 	{
 steps {
      script {
-	delivery.jenkins_bkp("maven-java", "jobs/maven-java")
+	delivery.jenkins_bkp("maven-java", "maven-java")
 	}
 	}
 }
 
-   stage('Create Archive  -- Devops-2')
+   stage('Create Archive  -- Devops-2-37')
         {
 steps {
      script {
-        delivery.jenkins_bkp("Devops-2", "jobs/Devops-2")
+        delivery.jenkins_bkp("Devops-2-37", "Devops-2-37")
         }
         }
 }
