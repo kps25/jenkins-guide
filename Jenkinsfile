@@ -3,7 +3,7 @@
 
 def delivery
 pipeline{
-  agent none
+  agent any
 
   stages {
    stage('Load deploy grrovy code')
