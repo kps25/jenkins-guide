@@ -15,14 +15,14 @@ steps {
 	}	
 }
 }
-//   stage('Create Archive  -- Web-App')
-//	{
-//steps {
-//     script {
-//	delivery.jenkins_bkp("", "jobs/Java-Web-App")
-//	}
-//	}
-//}
+   stage('Create Archive  -- Maven-java')
+	{
+steps {
+     script {
+	delivery.jenkins_bkp("maven-java", "job/maven-java")
+	}
+	}
+}
 
    stage('Create Archive  -- Devops-2')
         {
