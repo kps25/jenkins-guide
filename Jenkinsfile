@@ -29,7 +29,7 @@ steps {
         {
 steps {
      script {
-        delivery.jenkins_bkp("Devops-2", "job/Devops-2")
+        delivery.jenkins_bkp("Devops-2", "jobs/Devops-2")
         }
         }
 }
