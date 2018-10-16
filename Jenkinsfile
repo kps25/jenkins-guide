@@ -8,16 +8,20 @@ pipeline{
   stages {
    stage('Load deploy grrovy code')
 	{
-steps {
 	checkout scm
+steps {
+     script {
      	delivery = load 'deploy.groovy'
 	sh "ls ."
 	}	
 }
+}
    stage('Create Archive')
 	{
 steps {
+     script {
 	delivery.jenkins_bkp("jenkins", "jobs/Java-Web-App")
+	}
 	}
 }
    stage('Backup to S3 Bucket')
