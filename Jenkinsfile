@@ -8,8 +8,8 @@ pipeline{
   stages {
    stage('Load deploy grrovy code')
 	{
-	checkout scm
 steps {
+	checkout scm
      script {
      	delivery = load 'deploy.groovy'
 	sh "ls ."
