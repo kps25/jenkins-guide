@@ -19,7 +19,7 @@ steps {
 	{
 steps {
      script {
-	delivery.jenkins_bkp("maven-java", "job/maven-java")
+	delivery.jenkins_bkp("maven-java", "jobs/maven-java")
 	}
 	}
 }
