@@ -16,13 +16,22 @@ steps {
 	}	
 }
 }
-   stage('Create Archive')
-	{
+//   stage('Create Archive  -- Web-App')
+//	{
+//steps {
+//     script {
+//	delivery.jenkins_bkp("", "jobs/Java-Web-App")
+//	}
+//	}
+//}
+
+   stage('Create Archive  -- Devops-2')
+        {
 steps {
      script {
-	delivery.jenkins_bkp("jenkins", "jobs/Java-Web-App")
-	}
-	}
+        delivery.jenkins_bkp("Devops-2", "job/Devops-2")
+        }
+        }
 }
    stage('Backup to S3 Bucket')
 	{
