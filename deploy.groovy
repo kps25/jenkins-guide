@@ -10,3 +10,5 @@ def jenkins_bkp(dirName, jenUrl)
   sh "tar czf ${dirName}-configuration-${BUILD_ID}.tar.gz ${dirName}-${BUILD_ID}/"
 
 }
+
+return this;
