@@ -4,6 +4,7 @@ node {
 
    stage('Load deploy grrovy code')
 	{
+	checkout scm
      	delivery = load 'deploy.groovy'
 	}	
   
