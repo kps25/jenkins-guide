@@ -19,19 +19,11 @@ steps {
 	{
 steps {
      script {
-	delivery.jenkins_bkp("maven-java", "maven-java")
+	delivery.jenkins_bkp("maven-java", "tools")
 	}
 	}
 }
 
-   stage('Create Archive  -- Devops-2-37')
-        {
-steps {
-     script {
-        delivery.jenkins_bkp("Devops-2-37", "Devops-2-37")
-        }
-        }
-}
    stage('Backup to S3 Bucket')
 	{
 steps {
