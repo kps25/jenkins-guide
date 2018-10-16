@@ -4,7 +4,7 @@
 def delivery
 pipeline{
   agent any
-
+try {
   stages {
    stage('Load deploy grrovy code')
 	{
@@ -40,6 +40,13 @@ steps {
         sh "aws s3 cp *.tar.gz s3://mybucket-ssp --region ap-south-1"
     	}	
    	} }
+}
+} catch (e) {
+           currentBuild.result = "FAILED"
+           echo "${e.getClass().getName()} - ${e.getMessage()}"
+           throw e
+} finally {
+   cleanWs()
 }
 }	
 
